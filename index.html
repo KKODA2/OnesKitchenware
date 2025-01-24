@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchenware Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Add this right after the opening body tag -->
+    <div class="search-overlay">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for products...">
+            <button class="close-search">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="scroll-progress"></div>
+
+    <header>
+        <div class="logo">
+            <a href="#home">
+                <img src="images/logo.png" alt="Kitchenware Logo">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Product</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+            <div class="icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-upper">
+            <div class="slogan">
+                <h2>Discover the joy of kitchen</h2>
+            </div>
+            <div class="button-container">
+                <button class="cta-button" onclick="window.location.href='#gallery'">View Event</button>
+            </div>
+        </div>
+        <div class="hero-lower">
+            <h1>New Kitchen Set</h1>
+            <h2>Arrived</h2>
+            <p>Stewpot, Knife Sharpener, and more..</p>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="about-header">
+            <h2>About Us</h2>
+            <div class="separator"></div>
+            <p class="subtitle">Crafting Kitchen Excellence Since 1995</p>
+        </div>
+
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/logo-square.png" alt="Professional Kitchen Setup">
+                <div class="experience-badge">
+                    <span class="years">28</span>
+                    <span class="text">Years of Excellence</span>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h3>Your Culinary Journey Starts With Us</h3>
+                <p>At One's Kitchenware, we believe that every great meal starts with the right tools. Our journey began with a simple passion: to provide professional-grade kitchenware that inspires cooking excellence.</p>
+                
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <h4>Premium Quality</h4>
+                        <p>Crafted with precision and excellence</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Customer First</h4>
+                        <p>Dedicated to your satisfaction</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Eco-Friendly</h4>
+                        <p>Sustainable practices and materials</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tools"></i>
+                        <h4>Expert Support</h4>
+                        <p>Professional guidance always available</p>
+                    </div>
+                </div>
+
+                <div class="stats-container">
+                    <div class="stat">
+                        <span class="number">50K+</span>
+                        <span class="label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">1000+</span>
+                        <span class="label">Products</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">15+</span>
+                        <span class="label">Countries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <div class="products-header">
+            <h2>Our Products</h2>
+            <div class="separator"></div>
+            <p class="subtitle">Exceptional Quality for Every Kitchen</p>
+        </div>
+
+        <div class="products-content">
+            <div class="products-showcase">
+                <div class="main-product">
+                    <img src="images/product-1.jpg" alt="Product 1" id="mainProductImage">
+                </div>
+                <div class="product-thumbnails">
+                    <div class="thumbnail active" data-product="1">
+                        <img src="images/product-1.jpg" alt="Product 1">
+                    </div>
+                    <div class="thumbnail" data-product="2">
+                        <img src="images/product-2.jpg" alt="Product 2">
+                    </div>
+                    <div class="thumbnail" data-product="3">
+                        <img src="images/product-3.jpg" alt="Product 3">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="product-details" id="product1" style="display: block;">
+                    <h3>EdgeOne&trade; Knife Sharpener</h3>
+                    <p class="description">Professional-grade knife sharpener designed for precision and ease of use. Features multiple sharpening stages for both straight and serrated blades, ensuring razor-sharp results every time.</p>
+                    <div class="price-tag">$79.99</div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Diamond Abrasive Wheels</li>
+                        <li><i class="fas fa-check"></i> Multi-Stage Sharpening</li>
+                        <li><i class="fas fa-check"></i> Works on All Blade Types</li>
+                        <li><i class="fas fa-check"></i> Non-Slip Base</li>
+                    </ul>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-details" id="product2" style="display: none;">
+                    <h3>Premium Stew Pot&trade;</h3>
+                    <p class="description">Professional-grade stewpot crafted from high-quality stainless steel. Perfect heat distribution and durability for both home and professional use.</p>
+                    <div class="price-tag">$129.99</div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Premium Stainless Steel</li>
+                        <li><i class="fas fa-check"></i> Even Heat Distribution</li>
+                        <li><i class="fas fa-check"></i> Dishwasher Safe</li>
+                        <li><i class="fas fa-check"></i> Lifetime Warranty</li>
+                    </ul>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-details" id="product3" style="display: none;">
+                    <h3>StoreOnes&trade; Kitchen Holder</h3>
+                    <p class="description">Elegant wooden kitchen utensil holder with a practical aluminum base featuring drainage holes. Perfect for storing and drying your freshly washed kitchen tools while adding a touch of natural beauty to your countertop.</p>
+                    <div class="price-tag">$49.99</div>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Premium Hardwood Construction</li>
+                        <li><i class="fas fa-check"></i> Perforated Aluminum Base</li>
+                        <li><i class="fas fa-check"></i> Water Drainage System</li>
+                        <li><i class="fas fa-check"></i> Rust-Resistant Design</li>
+                    </ul>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-header">
+            <h2>Event Gallery</h2>
+            <div class="separator"></div>
+            <p class="subtitle">Experience the art of cooking with our exclusive events and workshops</p>
+        </div>
+    
+        <div class="gallery-filters">
+            <button class="filter-btn active">All Events</button>
+            <button class="filter-btn">Workshops</button>
+            <button class="filter-btn">Classes</button>
+            <button class="filter-btn">Shows</button>
+        </div>
+    
+        <div class="gallery-grid">
+            <!-- Cooking Workshop Event -->
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="images/Cooking workshop.jpg" alt="Professional Cooking Workshop">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Professional Cooking Workshop</h3>
+                            <p>Join our expert chefs for an intensive hands-on cooking experience. Learn professional techniques, knife skills, and kitchen management in our state-of-the-art facility.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-date">June 15, 2024</div>
+                    <div class="gallery-category">Workshop</div>
+                </div>
+            </div>
+    
+            <!-- Masterclass Event -->
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="images/Masterclass.jpg" alt="Asian Cuisine Masterclass">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Asian Cuisine Masterclass</h3>
+                            <p>Discover the secrets of authentic Asian cooking with Chef Wong. Master the art of wok cooking, learn about essential ingredients, and create signature dishes from across Asia.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-date">July 8, 2024</div>
+                    <div class="gallery-category">Class</div>
+                </div>
+            </div>
+    
+            <!-- Live Cooking Show -->
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="images/live show cooking.jpg" alt="Live Cooking Show">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Live Cooking Show & Tasting</h3>
+                            <p>Experience an exciting live cooking demonstration featuring seasonal ingredients. Enjoy tastings of prepared dishes and receive exclusive recipes to try at home.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-date">August 22, 2024</div>
+                    <div class="gallery-category">Show</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-header">
+            <h2>Contact Us</h2>
+            <div class="separator"></div>
+            <p class="subtitle">Get in Touch with Us</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div class="info-details">
+                        <h3>Phone</h3>
+                        <p>+60 12 943 4570</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-details">
+                        <h3>Location</h3>
+                        <p>1-G, Jalan Putra 6, Taman Kajang Putra, 43000 Kajang, Selangor</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/qwq_4114/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this before closing body tag -->
+    <script src="js/animation.js"></script>
+
+    <!-- Add before closing body tag, after contact section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="One's Kitchenware Logo">
+                <p class="copyright">
+                    &copy; <span id="currentYear"></span> One's Kitchenware. All Rights Reserved.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/product">Product</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/qwq_4114/" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="author-credit">
+            <p>Made by <a href="https://www.instagram.com/qwq_4114/" target="_blank" class="author-name">Chan Guan Zen</a> with 
+                <span class="heart-icon">
+                    <i class="fas fa-heart"></i>
+                </span> 
+                and passion
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
